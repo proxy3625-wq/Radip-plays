@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Radip Plays - Ultimate Gaming Channel</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+<style>
+/* GENERAL STYLES */
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth;font-family:'Press Start 2P', cursive;}
+body{
+background:#0f2027;
+background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+text-align:center;
+overflow-x:hidden;
+position:relative;
+height:100%;
+font-size:16px;
+}
+a{color:inherit;text-decoration:none;}
+
+/* NAVBAR */
+nav{
+position:sticky;
+top:0;
+background:#000;
+display:flex;
+justify-content:center;
+gap:50px;
+padding:15px;
+z-index:1000;
+box-shadow:0 4px 6px rgba(0,0,0,0.7);
+}
+nav a{
+color:white;
+text-decoration:none;
+font-size:16px;
+transition:.3s;
+}
+nav a:hover{
+color:#00ffff;
+text-shadow:0 0 10px #00ffff;
+}
+
+/* HERO SECTION */
+.hero{
+padding:120px 20px;
+position:relative;
+animation:fadeIn 2s ease-in-out;
+}
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+color:#00ffff;
+text-shadow:0 0 10px #00ffff,0 0 20px #00ffff;
+animation:textGlow 3s infinite;
+}
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+.btn{
+padding:15px 40px;
+font-size:18px;
+background:#ff0000;
+color:white;
+border:none;
+border-radius:10px;
+cursor:pointer;
+transition:.3s;
+text-shadow:0 0 5px black;
+}
+.btn:hover{
+transform:scale(1.1);
+background:#cc0000;
+box-shadow:0 0 20px #ff0000;
+}
+
+/* SECTION TITLES */
+.section-title{
+font-size:32px;
+margin-top:40px;
+margin-bottom:30px;
+color:#00ffff;
+text-shadow:0 0 5px #00ffff;
+}
+
+/* GAME CARDS */
+.container{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+padding:40px 20px;
+}
+.card{
+background:#16213e;
+width:280px;
+padding:30px;
+border-radius:15px;
+box-shadow:0 0 20px rgba(0,0,0,0.7);
+transition:.3s;
+animation:cardFade 2s ease-in-out;
+position:relative;
+overflow:hidden;
+}
+.card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background: linear-gradient(120deg,#ff00ff,#00ffff,#ff0000,#00ff00);
+opacity:0.2;
+transform:skewY(-10deg) translateX(-200px);
+transition:0.7s;
+}
+.card:hover::before{
+transform:skewY(-10deg) translateX(0);
+}
+.card:hover{
+transform:translateY(-10px) scale(1.05);
+box-shadow:0 0 25px #00ffff;
+}
+.card h3{
+margin-bottom:10px;
+}
+
+/* VIDEO SECTION */
+.videos{
+padding:60px 20px;
+}
+.video-grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+}
+iframe{
+width:350px;
+height:200px;
+border:none;
+border-radius:15px;
+transition:.3s;
+}
+iframe:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #00ffff;
+}
+
+/* ABOUT SECTION */
+.about{
+padding:60px 20px;
+max-width:900px;
+margin:auto;
+font-size:16px;
+line-height:1.6;
+text-align:left;
+}
+
+/* CONTACT SECTION */
+.contact{
+padding:60px 20px;
+text-align:left;
+}
+.contact a{
+color:cyan;
+font-size:18px;
+text-decoration:none;
+transition:.3s;
+}
+.contact a:hover{
+color:#ff0000;
+}
+
+/* FOOTER */
+footer{
+background:black;
+padding:20px;
+margin-top:40px;
+text-shadow:0 0 5px cyan;
+text-align:center;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn{
+0%{opacity:0; transform:translateY(-20px);}
+100%{opacity:1; transform:translateY(0);}
+}
+@keyframes cardFade{
+0%{opacity:0; transform:translateY(50px);}
+100%{opacity:1; transform:translateY(0);}
+}
+@keyframes textGlow{
+0%,100%{text-shadow:0 0 10px #00ffff,0 0 20px #00ffff;}
+50%{text-shadow:0 0 20px #ff00ff,0 0 30px #ff00ff;}
+}
+
+/* BACKGROUND PARTICLES */
+#particles-js{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+.hero h1{font-size:42px;}
+iframe{width:90%; height:200px;}
+.container{flex-direction:column; align-items:center;}
+nav{flex-direction:column; gap:15px;}
+}
+</style>
+</head>
+
+<body>
+
+<div id="particles-js"></div>
+
+<!-- NAVBAR -->
+<nav>
+<a href="#home">Home</a>
+<a href="#games">Games</a>
+<a href="#videos">Videos</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<h1>Radip Plays</h1>
+<p>Gaming Videos | Blox Fruits | Minecraft | Free Fire</p>
+<a href="https://youtube.com/@ra_dip_plays?si=z9FOdRNavZjSrQY6" target="_blank">
+<button class="btn">Subscribe Channel</button>
+</a>
+</section>
+
+<!-- GAMES -->
+<h2 id="games" class="section-title">Games on Channel</h2>
+<div class="container">
+<div class="card">
+<h3>Blox Fruits</h3>
+<p>Best fruits, grinding guides and PvP tips.</p>
+</div>
+<div class="card">
+<h3>Minecraft</h3>
+<p>Survival gameplay, builds and adventures.</p>
+</div>
+<div class="card">
+<h3>Free Fire</h3>
+<p>Highlights, funny moments and pro tricks.</p>
+</div>
+</div>
+
+<!-- VIDEOS -->
+<section id="videos" class="videos">
+<h2 class="section-title">Featured Videos</h2>
+<div class="video-grid">
+<iframe src="https://www.youtube.com/embed?listType=user_uploads&list=ra_dip_plays" allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+<h2 class="section-title">About Radip Plays</h2>
+<p>
+Welcome to <b>Radip Plays</b> 🎮  
+This channel is dedicated to gaming content like Blox Fruits, Minecraft and Free Fire.  
+Here you will find gameplay, guides, funny moments and pro tips.  
+Subscribe and join the gaming journey!
+</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+<h2 class="section-title">Contact</h2>
+<p>YouTube Channel:</p>
+<a href="https://youtube.com/@ra_dip_plays?si=z9FOdRNavZjSrQY6" target="_blank">youtube.com/@ra_dip_plays</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Radip Plays | Ultimate Gaming Website</p>
+</footer>
+
+<!-- PARTICLE JS -->
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script>
+particlesJS("particles-js",{
+"particles":{
+"number":{"value":80,"density":{"enable":true,"value_area":800}},
+"color":{"value":"#00ffff"},
+"shape":{"type":"circle","stroke":{"width":0,"color":"#000"}},
+"opacity":{"value":0.5,"random":true,"anim":{"enable":true,"speed":0.5,"opacity_min":0.1,"sync":false}},
+"size":{"value":3,"random":true,"anim":{"enable":true,"speed":2,"size_min":0.1,"sync":false}},
+"line_linked":{"enable":true,"distance":150,"color":"#00ffff","opacity":0.4,"width":1}},
+"move":{"enable":true,"speed":2,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false}}
+,"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},"onclick":{"enable":true,"mode":"push"}},"modes":{"grab":{"distance":140,"line_linked":{"opacity":1}},"push":{"particles_nb":4}}}
+,"retina_detect":true
+});
+</script>
+
+</body>
+</html>
+
+
